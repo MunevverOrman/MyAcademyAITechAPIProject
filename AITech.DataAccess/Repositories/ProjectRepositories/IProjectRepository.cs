@@ -5,5 +5,7 @@ namespace AITech.DataAccess.Repositories.ProjectRepositories
 {
     public interface IProjectRepository:IRepository<Project>
     {
+
+        Task<List<Project>> GetProjectsWithCategoriesAsync();
     }
 }
