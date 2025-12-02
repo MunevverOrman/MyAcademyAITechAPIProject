@@ -12,6 +12,6 @@ namespace AITech.WebUI.DTOs.ProjectDtos
 
         public int CategoryId { get; set; }
 
-        public ResultCategoryDto category { get; set; }
+        public ResultCategoryDto Category { get; set; }
     }
 }

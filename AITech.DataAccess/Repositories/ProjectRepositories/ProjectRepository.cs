@@ -15,7 +15,7 @@ namespace AITech.DataAccess.Repositories.ProjectRepositories
         {
            return await _context.Projects
                 .AsNoTracking()
-                .Include(x => x.category)
+                .Include(x => x.Category)
                 .ToListAsync();
         }
     }
