@@ -5,7 +5,7 @@ namespace AITech.DataAccess.Context
 {
     public class AppDbContext : DbContext
     {
-        public AppDbContext(DbContextOptions options) : base(options)
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
 
@@ -29,6 +29,17 @@ namespace AITech.DataAccess.Context
         public DbSet<SocialMedia> SocialMedias { get; set; }
 
         public DbSet<Testimonial> Testimonials { get; set; }
+
+        public DbSet<ContactInfo> ContactInfos{ get; set; }
+
+        public DbSet<ContactMessage> ContactMessages{ get; set; }
+
+        public DbSet<Newsletter> Newsletters{ get; set; }
+
+        public DbSet<TeamHeader> TeamHeaders{ get; set; }
+
+        public DbSet<TeamMember> TeamMembers{ get; set; }
+
 
 
     }

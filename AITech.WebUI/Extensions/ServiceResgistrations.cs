@@ -1,4 +1,6 @@
-﻿using AITech.WebUI.Services.CategoryServices;
+﻿using AITech.WebUI.Services.BannerServices;
+using AITech.WebUI.Services.CategoryServices;
+using AITech.WebUI.Services.GeminiServices;
 using AITech.WebUI.Services.ProjectServices;
 using FluentValidation;
 using FluentValidation.AspNetCore;
@@ -13,8 +15,10 @@ namespace AITech.WebUI.Extensions
            
             services.AddScoped<ICategoryService,CategoryService>();
             services.AddScoped<IProjectService,ProjectService>();
+            services.AddScoped<IBannerService,BannerService>();
 
-            services.AddFluentValidationAutoValidation()
+            services.AddHttpClient<IGeminiService, GeminiService>(); 
+services.AddFluentValidationAutoValidation()
                 .AddFluentValidationClientsideAdapters()
                 .AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
         }
