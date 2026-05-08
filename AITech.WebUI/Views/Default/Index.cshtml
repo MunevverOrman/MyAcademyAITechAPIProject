@@ -1,0 +1,61 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+ @await Component.InvokeAsync("_DefaultHeadComponentPartial")
+
+
+<body>
+  
+    @await Component.InvokeAsync("_DefaultNavbarComponentPartial")
+
+    @await Component.InvokeAsync("_DefaultBannerComponentPartial")
+
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(20, 24, 62, 0.7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn btn-square bg-white btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-light p-3"
+                               placeholder="Type search keyword">
+                        <button class="btn btn-light px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @await Component.InvokeAsync("_DefaultAboutComponentPartial")
+    
+ 
+    @await Component.InvokeAsync("_DefaultServiceComponentPartial")
+
+    @await Component.InvokeAsync("_DefaultWhyChooseUsComponentPartial")
+
+    @await Component.InvokeAsync("_DefaultCaseComponentPartial")
+
+    @await Component.InvokeAsync("_DefaultFAQComponentPartial")
+
+    @await Component.InvokeAsync("_DefaultTeamComponentPartial")
+
+    @await Component.InvokeAsync("_DefaultTestimonialComponentPartial")
+
+    @await Component.InvokeAsync("_DefaultNewsletterComponentPartial")
+
+    @await Component.InvokeAsync("_DefaultFooterComponentPartial")
+
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
+
+    @await Component.InvokeAsync("_DefaultScriptComponentPartial")
+   
+</body>
+
+</html>
